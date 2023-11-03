@@ -17,7 +17,7 @@ module.exports = (sequelize,Sequelize)=>{
               }
         },
         stateName:{
-            type:Sequelize.INTEGER,
+           type:Sequelize.CHAR(200),
             allowNull : false,
             field:'state_name',
         },

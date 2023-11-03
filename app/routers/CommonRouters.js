@@ -1,4 +1,4 @@
-const { countryList , stateList} = require("../controller/CommonController");
+const { countryList , stateList, upload} = require("../controller/CommonController");
 
 
 module.exports = function (app) {
@@ -12,4 +12,5 @@ module.exports = function (app) {
     })
     app.post("/api/countryList", countryList);
     app.post("/api/stateList", stateList);
+    app.post("/api/uploadImage", upload);
 }

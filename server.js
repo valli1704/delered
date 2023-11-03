@@ -1,7 +1,9 @@
 const express = require("express");
 const cors = require("cors");
+const path = require('path');
 
-
+global.__basedir = __dirname;
+console.log(__basedir)
 const app = express();
 
 var corsOptions = {
@@ -9,6 +11,7 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use('/resources', express.static(path.join(__dirname, 'resources')));
 
 // parse requests of content-type - application/json
 app.use(express.json());
@@ -29,3 +32,5 @@ require("./app/routers/CommonRouters")(app);
 app.listen(8000,function(){
   console.log("port is running");
 });
+
+

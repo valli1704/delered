@@ -8,14 +8,19 @@ module.exports = (sequelize,Sequelize)=>{
            field:'id'
         },
         countryCode:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.CHAR(20),
             allowNull : false,
             field:'country_code',
         },
         countryName:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.CHAR(200),
             allowNull : false,
             field:'country_name',
+        },
+        countryImage:{
+            type:Sequelize.TEXT,
+            allowNull : false,
+            field:'country_image',
         },
         createdAt: {
                 
