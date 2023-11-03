@@ -1,4 +1,4 @@
-const { createUser } = require("../controller/userController");
+const { createUser, logInUser} = require("../controller/userController");
 const { checkEmail, validateSchema } = require("../middleware");
 
 
@@ -13,4 +13,5 @@ module.exports = function (app) {
     })
    // app.post("/api/survivorSignUp", [verifySignUp.checkDuplicateEmail, verifySignUp.checkRolesExisting],controller.SurvivorSignUp)
     app.post("/api/createUser", checkEmail,createUser,);
+    app.post("/api/logInUser", logInUser,);
 }
