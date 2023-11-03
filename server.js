@@ -23,6 +23,8 @@ const db = require("./app/models");
 db.sequelize.sync();
 
 require("./app/routers/userRouters")(app);
+require("./app/routers/BusinessRouters")(app);
+require("./app/routers/CommonRouters")(app);
 
 app.listen(8000,function(){
   console.log("port is running");
