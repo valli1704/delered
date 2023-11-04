@@ -1,4 +1,4 @@
-const { listBusinessType } = require("../controller/BusinessController");
+const { listBusinessType, addBusiness } = require("../controller/BusinessController");
 
 
 module.exports = function (app) {
@@ -11,4 +11,5 @@ module.exports = function (app) {
         next();
     })
     app.post("/api/listBusinessType", listBusinessType,);
+    app.post("/api/addBusiness", addBusiness,);
 }

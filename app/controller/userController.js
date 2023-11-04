@@ -19,9 +19,6 @@ exports.createUser = async (req, res) => {
             email: req.body.email,
             password:bcrypt.hashSync(req.body.password,8)
           });
-
-      
-        console.log('data:::'+_users)
         res.status(200).send({message:"Users created successfully",users:_users})
       }
     }

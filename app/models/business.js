@@ -1,5 +1,5 @@
 module.exports = (sequelize,Sequelize)=>{
-    const business = sequelize.define('business',{
+    const _business = sequelize.define('business',{
         id :{
             type:Sequelize.INTEGER,
            allowNull : false,
@@ -63,8 +63,8 @@ module.exports = (sequelize,Sequelize)=>{
         },
         
         phoneNumber:{
-            type:Sequelize.INTEGER,
-            allowNull : false,
+            type:Sequelize.CHAR(20),
+            allowNull : true,
             field:'phone_number',
             
         },
@@ -83,7 +83,7 @@ module.exports = (sequelize,Sequelize)=>{
        
         emailId:{
             type:Sequelize.CHAR(45),
-            allowNull : false,
+            allowNull : true,
             field:'email_id',
             
         },
@@ -121,40 +121,40 @@ module.exports = (sequelize,Sequelize)=>{
     },
     address:{
         type:Sequelize.STRING(255),
-        allowNull : false,
+        allowNull : true,
         field:'address',
         
     },
     description:{
         type:Sequelize.STRING(255),
-        allowNull : false,
+        allowNull : true,
         field:'description',
         
     },
     websiteUrl:{
         type:Sequelize.STRING(255),
-        allowNull : false,
+        allowNull : true,
         field:'website_url',
         
     },
     logoImg:{
         type:Sequelize.STRING(255),
-        allowNull : false,
+        allowNull : true,
         field:'logo_img',
         
     },
     headerImg:{
         type:Sequelize.STRING(255),
-        allowNull : false,
+        allowNull : true,
         field:'header_img',
         
     },
     businessImg:{
         type:Sequelize.STRING(255),
-        allowNull : false,
+        allowNull : true,
         field:'business_img',
         
     },
     })
-    return business;
+    return _business;
 }
